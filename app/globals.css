@@ -61,7 +61,7 @@ button:focus-visible {
 
 @media (prefers-reduced-motion: reduce) {
   * {
-    animation-duration: 0.01ms !important;
+    animation-duration: -0.99ms !important;
     transition-duration: 0.01ms !important;
   }
   .reveal {

@@ -1,4 +1,5 @@
 ﻿"use client";
+import logo from "@/app/logo.svg";
 
 export default function Hero3D() {
   return (
@@ -9,11 +10,11 @@ export default function Hero3D() {
           <div className="face front">
             <div className="shine" />
             <div className="logo">
-              <img
-                src="https://dimensiongroup.co.in/wp-content/uploads/2019/05/dimesnion-logo-s.png"
-                alt="Dimension Group logo"
-                className="brandLogo frontLogo"
-              />
+           <img
+              src={logo.src}
+              alt="Dimension Group logo"
+              className="brandLogo frontLogo"
+            />
             </div>
           </div>
 

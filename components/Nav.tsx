@@ -1,5 +1,5 @@
 "use client";
-
+import logo from "@/app/logo.svg";
 import { useState } from "react";
 
 const investLinks = [
@@ -52,10 +52,10 @@ export default function Nav() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="flex items-center justify-between h-20">
           <a href="/" className="flex items-center">
-            <img
-              src="https://dimensiongroup.co.in/wp-content/uploads/2019/05/dimesnion-logo-s.png"
-              alt="Dimension Group"
-              className="h-12 w-auto"
+           <img
+              src={logo.src}
+              alt="Dimension Group logo"
+              className="brandLogo frontLogo"
             />
           </a>
 
