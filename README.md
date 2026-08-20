@@ -1,7 +1,7 @@
 # Dimension Group — Next.js site
 
 New design direction: paper-white + grid-paper background, cobalt blue / copper accent,
-Space Grotesk display + Inter body + JetBrains Mono for data. Three.js renders a rotating
+Poppins sans-serif across display, body, labels, and data. Three.js renders a rotating
 wireframe "yield ribbon" (torus knot) in the hero as the signature visual — mouse-reactive,
 representing compounding growth. Anime.js drives scroll-triggered reveals across every section.
 

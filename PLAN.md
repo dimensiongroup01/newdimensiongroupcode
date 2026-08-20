@@ -2,7 +2,7 @@
 
 ## Information Gathered
 - The project uses Next.js 14 with App Router, TypeScript, and Tailwind CSS
-- Design system: Colors (paper, ink, cobalt, cobalt-dim, copper, slate, line), Fonts (Space Grotesk/display, Inter/body, JetBrains Mono/mono)
+- Design system: Colors (paper, ink, cobalt, cobalt-dim, copper, slate, line), Fonts (Poppins sans-serif across display, body, labels, and data)
 - Existing components: Nav, Hero3D, Reveal, ServiceCard, Ticker
 - page.tsx has several inline sections that should be extracted into reusable components
 - The Nav.tsx mobile menu is functional but could be enhanced

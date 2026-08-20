@@ -17,9 +17,9 @@ const config: Config = {
         line: "#E4E2DA",
       },
       fontFamily: {
-        display: ["var(--font-space-grotesk)", "sans-serif"],
-        body: ["var(--font-inter)", "sans-serif"],
-        mono: ["var(--font-jetbrains)", "monospace"],
+        display: ["var(--font-poppins)", "Segoe UI", "sans-serif"],
+        body: ["var(--font-poppins)", "Segoe UI", "sans-serif"],
+        mono: ["var(--font-poppins)", "Segoe UI", "sans-serif"],
       },
       backgroundImage: {
         grid: "linear-gradient(to right, #E4E2DA 1px, transparent 1px), linear-gradient(to bottom, #E4E2DA 1px, transparent 1px)",
