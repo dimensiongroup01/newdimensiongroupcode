@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="bg-ink">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="max-w-[90vw] mx-auto px-6 lg:px-10 py-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
           <a href="/" className="inline-block mb-4 bg-white p-3 rounded-lg">
             <img
@@ -45,7 +45,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-6 flex flex-col sm:flex-row justify-between gap-2 text-white/40 text-xs font-mono">
+        <div className="max-w-[90vw] mx-auto px-6 lg:px-10 py-6 flex flex-col sm:flex-row justify-between gap-2 text-white/40 text-xs font-mono">
           <p>© 2026 Dimension Group. All rights reserved.</p>
           <p>Made with love by inhouse developers of Dimension</p>
         </div>

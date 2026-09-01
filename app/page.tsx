@@ -16,7 +16,7 @@ export default function Home() {
       {/* HERO */}
       <section className="relative overflow-hidden bg-[#f8fafc]">
         <div className="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-copper/12 to-transparent" />
-        <div className="max-w-7xl mx-auto relative px-6 lg:px-10 py-16 lg:py-20">
+        <div className="max-w-[90vw] mx-auto relative px-6 lg:px-10 py-16 lg:py-20">
           <div className="grid gap-12 lg:grid-cols-[0.62fr_0.38fr] items-center">
             <div className="space-y-8">
               <div className="space-y-5">
@@ -118,7 +118,7 @@ export default function Home() {
       </section>
 
       {/* SERVICES */}
-      <section id="services" className="max-w-7xl mx-auto px-6 lg:px-10 py-24">
+      <section id="services" className="max-w-[90vw] mx-auto px-6 lg:px-10 py-24">
         <Reveal className="max-w-2xl mb-14">
           <p className="font-mono text-[12px] tracking-[0.3em] text-cobalt mb-4">CORE INVESTMENT PRODUCTS</p>
           <h2 className="font-display font-semibold text-4xl md:text-5xl text-ink">
@@ -199,7 +199,7 @@ export default function Home() {
 
       {/* ABOUT */}
       <section id="about" className="bg-white border-y border-line">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-24 grid lg:grid-cols-2 gap-16">
+        <div className="max-w-[90vw] mx-auto px-6 lg:px-10 py-24 grid lg:grid-cols-2 gap-16">
           <Reveal>
             <p className="font-mono text-[12px] tracking-[0.3em] text-cobalt mb-4">WHO WE ARE</p>
             <h2 className="font-display font-semibold text-4xl text-ink mb-6 leading-tight">
@@ -263,529 +263,104 @@ export default function Home() {
         </div>
       </section>
 
+      {/*
+        PEOPLE — Leadership + Team
+        Both sections below share one card "frame": identical width (w-[280px])
+        and identical photo height (h-[360px]). Cards sit in a centered,
+        wrapping row so the frame stays constant no matter how many people
+        are in the section — 3 directors or 11 team members read as one
+        continuous system instead of two differently-sized card kits.
+      */}
+
       {/* LEADERSHIP */}
-<section
-  id="leadership"
-  className="relative overflow-hidden bg-white border-y border-slate-200"
->
-  {/* Decorative background */}
-  <div className="pointer-events-none absolute -top-48 right-[-120px] h-[500px] w-[500px] rounded-full bg-cobalt/5 blur-3xl" />
-  <div className="pointer-events-none absolute bottom-[-180px] left-[-120px] h-[400px] w-[400px] rounded-full bg-copper/5 blur-3xl" />
+      <section id="leadership" className="relative overflow-hidden bg-white border-y border-slate-200">
+        <div className="pointer-events-none absolute -top-48 right-[-120px] h-[500px] w-[500px] rounded-full bg-cobalt/5 blur-3xl" />
+        <div className="pointer-events-none absolute bottom-[-180px] left-[-120px] h-[400px] w-[400px] rounded-full bg-copper/5 blur-3xl" />
 
-  <div className="relative max-w-7xl mx-auto px-6 lg:px-10 py-24">
+        <div className="relative max-w-[90vw] mx-auto px-6 lg:px-10 py-24">
+          <Reveal className="mb-14">
+            <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
+              <div>
+                <div className="inline-flex items-center gap-3 mb-5">
+                  <span className="h-px w-10 bg-copper" />
+                  <p className="font-mono text-[11px] tracking-[0.3em] text-cobalt">LEADERSHIP</p>
+                </div>
+                <h2 className="font-display font-semibold text-4xl md:text-5xl lg:text-6xl text-ink leading-[1.02] max-w-2xl">
+                  The people setting
+                  <span className="block text-cobalt">direction.</span>
+                </h2>
+              </div>
+              <p className="max-w-md text-sm md:text-base leading-relaxed text-slate-600 lg:pb-2">
+                Experienced leadership guiding Dimension Group with a focus on
+                trust, disciplined execution and long-term growth.
+              </p>
+            </div>
+          </Reveal>
 
-    {/* Heading */}
-    <Reveal className="mb-14">
-      <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
-
-        <div>
-          <div className="inline-flex items-center gap-3 mb-5">
-            <span className="h-px w-10 bg-copper" />
-
-            <p className="font-mono text-[11px] tracking-[0.3em] text-cobalt">
-              LEADERSHIP
-            </p>
+          <div className="flex flex-wrap justify-center gap-7">
+            {[
+              { name: "Vivek Gautam", role: "Director", image: "https://dimensionfinancial.co.in/images/Vivek%20sir%20new.jpeg" },
+              { name: "Ravi Kant Mathur", role: "Director", image: "https://dimensionfinancial.co.in/images/Ravi%20sir%20Image.png" },
+              { name: "Prachi Mathur", role: "Director", image: "https://dimensionfinancial.co.in/images/pc.png" },
+            ].map((person, i) => (
+              <Reveal key={person.name} delay={i * 100}>
+                <PersonCard person={person} accentLabel="DIMENSION GROUP" />
+              </Reveal>
+            ))}
           </div>
-
-          <h2 className="font-display font-semibold text-4xl md:text-5xl lg:text-6xl text-ink leading-[1.02] max-w-2xl">
-            The people setting
-            <span className="block text-cobalt">
-              direction.
-            </span>
-          </h2>
         </div>
+      </section>
 
-        <p className="max-w-md text-sm md:text-base leading-relaxed text-slate-600 lg:pb-2">
-          Experienced leadership guiding Dimension Group with a focus on
-          trust, disciplined execution and long-term growth.
-        </p>
+      {/* OUR TEAM */}
+      <section id="team" className="relative overflow-hidden bg-[#f7f8fa] border-y border-slate-200">
+        <div className="pointer-events-none absolute -top-40 -right-40 h-96 w-96 rounded-full bg-cobalt/10 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-40 -left-40 h-96 w-96 rounded-full bg-copper/10 blur-3xl" />
 
-      </div>
-    </Reveal>
-
-    {/* Leadership Cards */}
-    <div className="grid md:grid-cols-3 gap-7">
-
-      {[
-        {
-          name: "Vivek Gautam",
-          role: "DIRECTOR",
-          image:
-            "https://dimensionfinancial.co.in/images/Vivek%20sir%20new.jpeg",
-        },
-        {
-          name: "Ravi Kant Mathur",
-          role: "DIRECTOR",
-          image:
-            "https://dimensionfinancial.co.in/images/Ravi%20sir%20Image.png",
-        },
-        {
-          name: "Prachi Mathur",
-          role: "DIRECTOR",
-          image:
-            "https://dimensionfinancial.co.in/images/pc.png",
-        },
-      ].map((person, i) => (
-
-        <Reveal
-          key={person.name}
-          delay={i * 100}
-          className="h-full"
-        >
-
-          <article
-            className="
-              group relative h-full overflow-hidden
-              rounded-[28px]
-              border border-slate-200
-              bg-white
-              shadow-[0_12px_40px_rgba(15,23,42,0.06)]
-              transition-all duration-500
-              hover:-translate-y-2
-              hover:border-cobalt/50
-              hover:shadow-[0_28px_70px_rgba(15,23,42,0.14)]
-            "
-          >
-
-            {/* Image */}
-            <div className="relative h-[390px] overflow-hidden bg-slate-100">
-
-              {/* Image */}
-              <img
-                src={person.image}
-                alt={person.name}
-                className="
-                  h-full w-full
-                  object-cover
-                  object-top
-                  transition-transform
-                  duration-700
-                  ease-out
-                  group-hover:scale-105
-                "
-              />
-
-              {/* Image gradient */}
-              <div
-                className="
-                  absolute inset-x-0 bottom-0 h-44
-                  bg-gradient-to-t
-                  from-black/65
-                  via-black/20
-                  to-transparent
-                "
-              />
-
-              {/* Director badge */}
-              <div className="absolute bottom-6 left-6">
-                <span
-                  className="
-                    inline-flex items-center
-                    rounded-full
-                    border border-white/30
-                    bg-white/15
-                    px-4 py-2
-                    backdrop-blur-md
-                    font-mono text-[10px]
-                    tracking-[0.2em]
-                    text-white
-                  "
-                >
-                  {person.role}
-                </span>
-              </div>
-
-            </div>
-
-            {/* Card information */}
-            <div className="p-7">
-
-              <div className="flex items-center justify-between gap-5">
-
-                <div>
-                  <h3
-                    className="
-                      font-display
-                      text-2xl
-                      font-semibold
-                      leading-tight
-                      text-ink
-                      transition-colors
-                      duration-300
-                      group-hover:text-cobalt
-                    "
-                  >
-                    {person.name}
-                  </h3>
-
-                  <p className="mt-2 text-sm text-slate-500">
-                    Director
-                  </p>
+        <div className="relative max-w-[90vw] mx-auto px-6 lg:px-10 py-24">
+          <Reveal className="mb-14">
+            <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
+              <div>
+                <div className="inline-flex items-center gap-3 mb-5">
+                  <span className="h-px w-10 bg-copper" />
+                  <p className="font-mono text-[11px] tracking-[0.3em] text-cobalt">OUR TEAM</p>
                 </div>
-
-                {/* Arrow */}
-                <div
-                  className="
-                    flex h-11 w-11 shrink-0
-                    items-center justify-center
-                    rounded-full
-                    border border-slate-200
-                    text-slate-500
-                    transition-all
-                    duration-300
-                    group-hover:border-cobalt
-                    group-hover:bg-cobalt
-                    group-hover:text-white
-                    group-hover:rotate-[-45deg]
-                  "
-                >
-                  <span className="text-lg">
-                    →
-                  </span>
-                </div>
-
+                <h2 className="font-display font-semibold text-4xl md:text-5xl lg:text-6xl text-ink leading-[1.02] max-w-2xl">
+                  The people behind
+                  <span className="block text-cobalt">the numbers.</span>
+                </h2>
               </div>
-
-              {/* Divider */}
-              <div className="mt-7 h-px w-full bg-slate-100">
-                <div
-                  className="
-                    h-full w-0
-                    bg-cobalt
-                    transition-all
-                    duration-500
-                    group-hover:w-full
-                  "
-                />
-              </div>
-
-              {/* Footer */}
-              <div className="mt-5 flex items-center justify-between">
-
-                <span
-                  className="
-                    font-mono
-                    text-[9px]
-                    tracking-[0.2em]
-                    text-slate-400
-                  "
-                >
-                  DIMENSION GROUP
-                </span>
-
-                <a
-                  href="#"
-                  className="
-                    text-xs
-                    font-semibold
-                    text-cobalt
-                    opacity-0
-                    translate-x-2
-                    transition-all
-                    duration-300
-                    group-hover:opacity-100
-                    group-hover:translate-x-0
-                  "
-                >
-                  LINKEDIN →
-                </a>
-
-              </div>
-
+              <p className="max-w-md text-sm md:text-base leading-relaxed text-slate-600 lg:pb-2">
+                Meet the professionals who bring expertise, experience and
+                execution together to create better financial outcomes.
+              </p>
             </div>
+          </Reveal>
 
-          </article>
-
-        </Reveal>
-
-      ))}
-
-    </div>
-
-  </div>
-</section>
-
-      {/* OUR TEAM — 18 people */}
-    {/* OUR TEAM */}
-<section
-  id="team"
-  className="relative overflow-hidden bg-[#f7f8fa] border-y border-slate-200"
->
-  {/* Decorative background */}
-  <div className="pointer-events-none absolute -top-40 -right-40 h-96 w-96 rounded-full bg-cobalt/10 blur-3xl" />
-  <div className="pointer-events-none absolute -bottom-40 -left-40 h-96 w-96 rounded-full bg-copper/10 blur-3xl" />
-
-  <div className="relative max-w-7xl mx-auto px-6 lg:px-10 py-24">
-
-    {/* Heading */}
-    <Reveal className="mb-14">
-      <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
-
-        <div>
-          <div className="inline-flex items-center gap-3 mb-5">
-            <span className="h-px w-10 bg-copper" />
-            <p className="font-mono text-[11px] tracking-[0.3em] text-cobalt">
-              OUR TEAM
-            </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
+            {[
+              { name: "Supriya Sharma", role: "Asst. VP", image: "https://dimensionfinancial.co.in/images/ss.png" },
+              { name: "Pragya Srivastav", role: "CA", image: "https://dimensionfinancial.co.in/images/Pragyanew.jpeg" },
+              { name: "Shlok Shah", role: "Software Developer", image: "https://dimensionfinancial.co.in/images/NEWSHLOK.jpeg" },
+              { name: "Utkarsh Bhatnagar", role: "Asst Debt Manager", image: "https://dimensionfinancial.co.in/images/ub%20new.jpeg" },
+              { name: "Pratik Vishwakarma", role: "Software Developer", image: "https://www.dimensioncorporateservices.com/team/Pratik.png" },
+              { name: "Shivangi", role: "Company Secretary", image: "/images/shivangi.png" },
+              { name: "Arjun Singh", role: "Accounts Executive", image: "https://dimensionfinancial.co.in/images/Arjun.jpeg" },
+              { name: "Anushkha Chandra", role: "HR & Admin", image: "https://dimensionfinancial.co.in/images/HRAnushkha.jpg" },
+              { name: "Pooja Singh", role: "Accounts Executive", image: "/images/pooja.jpg" },
+              { name: "Ved Prakash", role: "Debt Market", image: "https://dimensionfinancial.co.in/images/Ved%20Prakash.png" },
+              { name: "S Ghosh", role: "Debt Market", image: "https://dimensionfinancial.co.in/images/SGOSH.png" },
+            ].map((person, i) => (
+              <Reveal key={person.name} delay={(i % 4) * 70}>
+                <PersonCard person={person} accentLabel="DIMENSION GROUP" />
+              </Reveal>
+            ))}
           </div>
-
-          <h2 className="font-display font-semibold text-4xl md:text-5xl lg:text-6xl text-ink leading-[1.02] max-w-2xl">
-            The people behind
-            <span className="block text-cobalt">
-              the numbers.
-            </span>
-          </h2>
         </div>
-
-        <p className="max-w-md text-sm md:text-base leading-relaxed text-slate-600 lg:pb-2">
-          Meet the professionals who bring expertise, experience and
-          execution together to create better financial outcomes.
-        </p>
-
-      </div>
-    </Reveal>
-
-    {/* Team Cards */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-
-      {[
-        {
-          name: "Supriya Sharma",
-          role: "Asst . VP",
-          image:
-            "https://dimensionfinancial.co.in/images/ss.png",
-        },
-        {
-          name: "Pragya Srivastav",
-          role: "CA",
-          image:
-            "https://dimensionfinancial.co.in/images/Pragyanew.jpeg",
-        },
-        {
-          name: "Shlok Shah",
-          role: "Software Developer",
-          image:
-            "https://dimensionfinancial.co.in/images/NEWSHLOK.jpeg",
-        },
-        {
-          name: "Utkarsh Bhatnagar",
-          role: "Asst Debt Manager",
-          image:
-            "https://dimensionfinancial.co.in/images/ub%20new.jpeg",
-        },
-        {
-          name: "Pratik Vishwakarma",
-          role: "Software Developer",
-          image:
-            "https://www.dimensioncorporateservices.com/team/Pratik.png",
-        },
-        {
-          name: "Shivangi",
-          role: "Company Secretry",
-          image:
-            "/images/shivangi.png",
-        },
-        {
-          name: "Arjun Singh",
-          role: "Accounts Executive",
-          image:
-            "https://dimensionfinancial.co.in/images/Arjun.jpeg",
-        },
-        {
-          name: "Anushkha Chandra",
-          role: "HR & ADMIN",
-          image:
-            "https://dimensionfinancial.co.in/images/HRAnushkha.jpg",
-        },
-        {
-          name: "Pooja Singh",
-          role: "Accounts Executive",
-          image:
-            "/images/pooja.jpg",
-        },
-        {
-          name: "Ved Prakash",
-          role: "Debt Market",
-          image:
-            "https://dimensionfinancial.co.in/images/HRAnushkha.jpg",
-        },
-        {
-          name: "S Ghosh",
-          role: "Debt Market",
-          image:
-            "https://dimensionfinancial.co.in/images/SGOSH.png",
-        },
-      ].map((person, i) => (
-
-        <Reveal
-          key={person.name}
-          delay={(i % 4) * 70}
-          className="h-full"
-        >
-          <article
-            className="
-              group relative h-full overflow-hidden
-              rounded-[26px]
-              border border-slate-200
-              bg-white
-              shadow-[0_10px_35px_rgba(15,23,42,0.05)]
-              transition-all duration-500
-              hover:-translate-y-2
-              hover:border-cobalt/50
-              hover:shadow-[0_25px_60px_rgba(15,23,42,0.12)]
-            "
-          >
-
-            {/* Top image area */}
-            <div className="relative h-[285px] overflow-hidden bg-slate-100">
-
-              {/* Image */}
-              <img
-                src={person.image}
-                alt={person.name}
-                className="
-                  h-full w-full
-                  object-cover
-                  object-top
-                  transition-transform
-                  duration-700
-                  ease-out
-                  group-hover:scale-105
-                "
-              />
-
-              {/* Bottom gradient */}
-              <div
-                className="
-                  absolute inset-x-0 bottom-0 h-32
-                  bg-gradient-to-t
-                  from-black/55
-                  via-black/10
-                  to-transparent
-                  opacity-80
-                "
-              />
-
-              {/* Role badge */}
-              <div className="absolute bottom-5 left-5 right-5">
-                <span
-                  className="
-                    inline-flex items-center
-                    rounded-full
-                    border border-white/30
-                    bg-white/15
-                    px-3 py-1.5
-                    backdrop-blur-md
-                    font-mono text-[9px]
-                    tracking-[0.15em]
-                    text-white
-                  "
-                >
-                  {person.role.toUpperCase()}
-                </span>
-              </div>
-
-            </div>
-
-            {/* Card content */}
-            <div className="relative p-6">
-
-              <div className="flex items-start justify-between gap-4">
-
-                <div>
-                  <h3
-                    className="
-                      font-display
-                      text-xl
-                      font-semibold
-                      leading-tight
-                      text-ink
-                      transition-colors
-                      duration-300
-                      group-hover:text-cobalt
-                    "
-                  >
-                    {person.name}
-                  </h3>
-
-                  <p className="mt-2 text-sm text-slate-500">
-                    {person.role}
-                  </p>
-                </div>
-
-                {/* Arrow */}
-                <div
-                  className="
-                    flex h-10 w-10 shrink-0
-                    items-center justify-center
-                    rounded-full
-                    border border-slate-200
-                    text-slate-500
-                    transition-all
-                    duration-300
-                    group-hover:border-cobalt
-                    group-hover:bg-cobalt
-                    group-hover:text-white
-                    group-hover:rotate-[-45deg]
-                  "
-                >
-                  <span className="text-lg">
-                    →
-                  </span>
-                </div>
-
-              </div>
-
-              {/* Bottom line */}
-              <div className="mt-6 h-px w-full bg-slate-100">
-                <div
-                  className="
-                    h-full w-0
-                    bg-cobalt
-                    transition-all
-                    duration-500
-                    group-hover:w-full
-                  "
-                />
-              </div>
-
-              <div className="mt-4 flex items-center justify-between">
-
-                <span className="font-mono text-[9px] tracking-[0.2em] text-slate-400">
-                  DIMENSION GROUP
-                </span>
-
-                <span
-                  className="
-                    text-xs font-semibold
-                    text-cobalt
-                    opacity-0
-                    translate-x-2
-                    transition-all duration-300
-                    group-hover:opacity-100
-                    group-hover:translate-x-0
-                  "
-                >
-                  VIEW PROFILE
-                </span>
-
-              </div>
-
-            </div>
-
-          </article>
-        </Reveal>
-
-      ))}
-
-    </div>
-
-  </div>
-</section>
+      </section>
 
       {/* GROUP COMPANIES */}
       <section id="group-companies" className="bg-ink">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-24">
+        <div className="max-w-[90vw] mx-auto px-6 lg:px-10 py-24">
           <Reveal>
             <p className="font-mono text-[12px] tracking-[0.3em] text-copper mb-4">GROUP COMPANIES</p>
             <h2 className="font-display font-semibold text-4xl text-white mb-6 max-w-xl">
@@ -815,7 +390,7 @@ export default function Home() {
       </section>
 
       {/* PARTNER CTA */}
-      <section id="partners" className="max-w-7xl mx-auto px-6 lg:px-10 py-24">
+      <section id="partners" className="max-w-[90vw] mx-auto px-6 lg:px-10 py-24">
         <Reveal>
           <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-cobalt to-cobalt-dim">
             <div className="relative z-10 px-8 lg:px-16 py-16 lg:py-20 max-w-2xl">
@@ -844,7 +419,7 @@ export default function Home() {
 
       {/* LICENSES & CERTIFICATIONS */}
       <section id="licenses" className="bg-slate-50 border-t border-line">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-24">
+        <div className="max-w-[90vw] mx-auto px-6 lg:px-10 py-24">
           <Reveal className="mb-14">
             <p className="font-mono text-[12px] tracking-[0.3em] text-cobalt mb-4">COMPLIANCE & CERTIFICATIONS</p>
             <h2 className="font-display font-semibold text-4xl md:text-5xl text-ink">
@@ -913,7 +488,7 @@ export default function Home() {
 
       {/* CONTACT */}
       <section id="contact" className="bg-white border-t border-line">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-24 grid lg:grid-cols-2 gap-16">
+        <div className="max-w-[90vw] mx-auto px-6 lg:px-10 py-24 grid lg:grid-cols-2 gap-16">
           <Reveal>
             <p className="font-mono text-[12px] tracking-[0.3em] text-cobalt mb-4">GET A PROPOSAL</p>
             <h2 className="font-display font-semibold text-4xl text-ink mb-6">Surely you will love it.</h2>
@@ -962,5 +537,77 @@ export default function Home() {
         </svg>
       </a>
     </main>
+  );
+}
+
+/**
+ * Shared card used by both the Leadership and Team sections.
+ * Fixed width (w-[280px]) and fixed photo height (h-[360px]) so every
+ * card — director or team member — occupies exactly the same frame.
+ */
+function PersonCard({
+  person,
+  accentLabel,
+}: {
+  person: { name: string; role: string; image: string };
+  accentLabel: string;
+}) {
+  return (
+    <article
+      className="
+        group relative w-[280px] shrink-0 overflow-hidden
+        rounded-[24px]
+        border border-slate-200
+        bg-white
+        shadow-[0_10px_35px_rgba(15,23,42,0.06)]
+        transition-all duration-300
+        hover:-translate-y-1.5
+        hover:border-cobalt/50
+        hover:shadow-[0_24px_55px_rgba(15,23,42,0.12)]
+      "
+    >
+      {/* Photo frame — identical height across every card. object-cover fills
+          the frame edge-to-edge regardless of the source photo's aspect
+          ratio, so no letterboxing/backdrop banding shows through. */}
+      <div className="relative h-[360px] overflow-hidden bg-slate-100">
+        <img
+          src={person.image}
+          alt={person.name}
+          className="h-full w-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+        />
+        <div className="absolute inset-x-0 bottom-0 z-20 h-28 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+        <div className="absolute bottom-4 left-4 right-4 z-30">
+          <span className="inline-flex items-center rounded-full border border-white/30 bg-white/15 px-3 py-1.5 backdrop-blur-md font-mono text-[9px] tracking-[0.15em] text-white">
+            {person.role.toUpperCase()}
+          </span>
+        </div>
+      </div>
+
+      {/* Info block — identical height across every card */}
+      <div className="p-6">
+        <div className="flex items-start justify-between gap-4">
+          <div>
+            <h3 className="font-display text-lg font-semibold leading-tight text-ink transition-colors duration-300 group-hover:text-cobalt">
+              {person.name}
+            </h3>
+            <p className="mt-1.5 text-sm text-slate-500">{person.role}</p>
+          </div>
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-slate-200 text-slate-500 transition-all duration-300 group-hover:border-cobalt group-hover:bg-cobalt group-hover:text-white group-hover:rotate-[-45deg]">
+            <span className="text-lg">→</span>
+          </div>
+        </div>
+
+        <div className="mt-5 h-px w-full bg-slate-100">
+          <div className="h-full w-0 bg-cobalt transition-all duration-500 group-hover:w-full" />
+        </div>
+
+        <div className="mt-4 flex items-center justify-between">
+          <span className="font-mono text-[9px] tracking-[0.2em] text-slate-400">{accentLabel}</span>
+          <span className="text-xs font-semibold text-cobalt opacity-0 translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
+            VIEW PROFILE
+          </span>
+        </div>
+      </div>
+    </article>
   );
 }

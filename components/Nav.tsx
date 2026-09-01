@@ -48,7 +48,7 @@ export default function Nav() {
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-lg">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+      <div className="max-w-[90vw] mx-auto px-6 lg:px-10">
         <div className="flex items-center justify-between h-40">
           <a href="/" className="flex items-center">
             <span className="relative block h-20 w-60 overflow-hidden md:h-24 md:w-72">

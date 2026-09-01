@@ -254,7 +254,7 @@ export default function BusinessPartnerPage() {
         <div className="pointer-events-none absolute -right-24 -top-32 h-[420px] w-[420px] rounded-full bg-cobalt/30 blur-[120px]" />
         <div className="pointer-events-none absolute -left-24 bottom-0 h-[300px] w-[300px] rounded-full bg-copper/20 blur-[110px]" />
 
-        <div className="relative mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
+        <div className="relative mx-auto max-w-[90vw] px-6 py-20 lg:px-10 lg:py-28">
           <Reveal className="max-w-3xl">
             <div className="mb-7 flex items-center gap-2 font-mono text-[11px] tracking-[0.25em] text-white/45">
               <a href="/" className="transition hover:text-white">
@@ -298,7 +298,7 @@ export default function BusinessPartnerPage() {
         <div className="relative h-px w-full bg-gradient-to-r from-transparent via-white/15 to-transparent" />
       </section>
 
-      <div className="mx-auto max-w-7xl px-6 py-10 lg:px-10">
+      <div className="mx-auto max-w-[90vw] px-6 py-10 lg:px-10">
         {page.sections.map((section, index) => (
           <PageSection key={section.title} section={section} index={index} />
         ))}
