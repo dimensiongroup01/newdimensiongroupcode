@@ -9,7 +9,9 @@ html {
 body {
   background-color: #FAFAF7;
   color: #0F141B;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
+
 
 .bg-grid-fade {
   background-image:

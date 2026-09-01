@@ -3,6 +3,8 @@ import Ticker from "@/components/Ticker";
 import Reveal from "@/components/Reveal";
 import ServiceCard from "@/components/ServiceCard";
 import Hero3D from "@/components/Hero3D";
+import Footer from "@/components/Footer";
+
 
 
 export default function Home() {
@@ -262,48 +264,524 @@ export default function Home() {
       </section>
 
       {/* LEADERSHIP */}
-      <section id="leadership" className="max-w-7xl mx-auto px-6 lg:px-10 py-24">
-        <Reveal>
-          <p className="font-mono text-[12px] tracking-[0.3em] text-cobalt mb-4">LEADERSHIP</p>
-          <h2 className="font-display font-semibold text-4xl text-ink mb-14">
-            The people setting direction.
+<section
+  id="leadership"
+  className="relative overflow-hidden bg-white border-y border-slate-200"
+>
+  {/* Decorative background */}
+  <div className="pointer-events-none absolute -top-48 right-[-120px] h-[500px] w-[500px] rounded-full bg-cobalt/5 blur-3xl" />
+  <div className="pointer-events-none absolute bottom-[-180px] left-[-120px] h-[400px] w-[400px] rounded-full bg-copper/5 blur-3xl" />
+
+  <div className="relative max-w-7xl mx-auto px-6 lg:px-10 py-24">
+
+    {/* Heading */}
+    <Reveal className="mb-14">
+      <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
+
+        <div>
+          <div className="inline-flex items-center gap-3 mb-5">
+            <span className="h-px w-10 bg-copper" />
+
+            <p className="font-mono text-[11px] tracking-[0.3em] text-cobalt">
+              LEADERSHIP
+            </p>
+          </div>
+
+          <h2 className="font-display font-semibold text-4xl md:text-5xl lg:text-6xl text-ink leading-[1.02] max-w-2xl">
+            The people setting
+            <span className="block text-cobalt">
+              direction.
+            </span>
           </h2>
+        </div>
+
+        <p className="max-w-md text-sm md:text-base leading-relaxed text-slate-600 lg:pb-2">
+          Experienced leadership guiding Dimension Group with a focus on
+          trust, disciplined execution and long-term growth.
+        </p>
+
+      </div>
+    </Reveal>
+
+    {/* Leadership Cards */}
+    <div className="grid md:grid-cols-3 gap-7">
+
+      {[
+        {
+          name: "Vivek Gautam",
+          role: "DIRECTOR",
+          image:
+            "https://dimensionfinancial.co.in/images/Vivek%20sir%20new.jpeg",
+        },
+        {
+          name: "Ravi Kant Mathur",
+          role: "DIRECTOR",
+          image:
+            "https://dimensionfinancial.co.in/images/Ravi%20sir%20Image.png",
+        },
+        {
+          name: "Prachi Mathur",
+          role: "DIRECTOR",
+          image:
+            "https://dimensionfinancial.co.in/images/pc.png",
+        },
+      ].map((person, i) => (
+
+        <Reveal
+          key={person.name}
+          delay={i * 100}
+          className="h-full"
+        >
+
+          <article
+            className="
+              group relative h-full overflow-hidden
+              rounded-[28px]
+              border border-slate-200
+              bg-white
+              shadow-[0_12px_40px_rgba(15,23,42,0.06)]
+              transition-all duration-500
+              hover:-translate-y-2
+              hover:border-cobalt/50
+              hover:shadow-[0_28px_70px_rgba(15,23,42,0.14)]
+            "
+          >
+
+            {/* Image */}
+            <div className="relative h-[390px] overflow-hidden bg-slate-100">
+
+              {/* Image */}
+              <img
+                src={person.image}
+                alt={person.name}
+                className="
+                  h-full w-full
+                  object-cover
+                  object-top
+                  transition-transform
+                  duration-700
+                  ease-out
+                  group-hover:scale-105
+                "
+              />
+
+              {/* Image gradient */}
+              <div
+                className="
+                  absolute inset-x-0 bottom-0 h-44
+                  bg-gradient-to-t
+                  from-black/65
+                  via-black/20
+                  to-transparent
+                "
+              />
+
+              {/* Director badge */}
+              <div className="absolute bottom-6 left-6">
+                <span
+                  className="
+                    inline-flex items-center
+                    rounded-full
+                    border border-white/30
+                    bg-white/15
+                    px-4 py-2
+                    backdrop-blur-md
+                    font-mono text-[10px]
+                    tracking-[0.2em]
+                    text-white
+                  "
+                >
+                  {person.role}
+                </span>
+              </div>
+
+            </div>
+
+            {/* Card information */}
+            <div className="p-7">
+
+              <div className="flex items-center justify-between gap-5">
+
+                <div>
+                  <h3
+                    className="
+                      font-display
+                      text-2xl
+                      font-semibold
+                      leading-tight
+                      text-ink
+                      transition-colors
+                      duration-300
+                      group-hover:text-cobalt
+                    "
+                  >
+                    {person.name}
+                  </h3>
+
+                  <p className="mt-2 text-sm text-slate-500">
+                    Director
+                  </p>
+                </div>
+
+                {/* Arrow */}
+                <div
+                  className="
+                    flex h-11 w-11 shrink-0
+                    items-center justify-center
+                    rounded-full
+                    border border-slate-200
+                    text-slate-500
+                    transition-all
+                    duration-300
+                    group-hover:border-cobalt
+                    group-hover:bg-cobalt
+                    group-hover:text-white
+                    group-hover:rotate-[-45deg]
+                  "
+                >
+                  <span className="text-lg">
+                    →
+                  </span>
+                </div>
+
+              </div>
+
+              {/* Divider */}
+              <div className="mt-7 h-px w-full bg-slate-100">
+                <div
+                  className="
+                    h-full w-0
+                    bg-cobalt
+                    transition-all
+                    duration-500
+                    group-hover:w-full
+                  "
+                />
+              </div>
+
+              {/* Footer */}
+              <div className="mt-5 flex items-center justify-between">
+
+                <span
+                  className="
+                    font-mono
+                    text-[9px]
+                    tracking-[0.2em]
+                    text-slate-400
+                  "
+                >
+                  DIMENSION GROUP
+                </span>
+
+                <a
+                  href="#"
+                  className="
+                    text-xs
+                    font-semibold
+                    text-cobalt
+                    opacity-0
+                    translate-x-2
+                    transition-all
+                    duration-300
+                    group-hover:opacity-100
+                    group-hover:translate-x-0
+                  "
+                >
+                  LINKEDIN →
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
         </Reveal>
 
-        <div className="grid sm:grid-cols-3 gap-6">
-          {[
-            {
-              name: "Vivek Gautam",
-              image: "https://dimensionfinancial.co.in/images/Vivek%20sir%20new.jpeg",
-            },
-            {
-              name: "Ravi Kant Mathur",
-              image: "https://dimensionfinancial.co.in/images/Ravi%20sir%20Image.png",
-            },
-            {
-              name: "Prachi Mathur",
-              image: "https://dimensionfinancial.co.in/images/pc.png",
-            },
-          ].map((person, i) => (
-            <Reveal key={person.name} delay={i * 80}>
-              <div className="bg-white border border-line rounded-2xl p-8 text-center transition hover:-translate-y-1.5 hover:border-cobalt">
-                <div className="mx-auto mb-5 h-20 w-20 overflow-hidden rounded-full border border-line">
-                  <img
-                    src={person.image}
-                    alt={person.name}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <h3 className="font-display font-semibold text-xl text-ink mb-1">{person.name}</h3>
-                <p className="font-mono text-xs text-slate mb-4">DIRECTOR</p>
-                <a href="#" className="text-cobalt text-sm font-semibold hover:underline">
-                  LinkedIn profile →
-                </a>
-              </div>
-            </Reveal>
-          ))}
+      ))}
+
+    </div>
+
+  </div>
+</section>
+
+      {/* OUR TEAM — 18 people */}
+    {/* OUR TEAM */}
+<section
+  id="team"
+  className="relative overflow-hidden bg-[#f7f8fa] border-y border-slate-200"
+>
+  {/* Decorative background */}
+  <div className="pointer-events-none absolute -top-40 -right-40 h-96 w-96 rounded-full bg-cobalt/10 blur-3xl" />
+  <div className="pointer-events-none absolute -bottom-40 -left-40 h-96 w-96 rounded-full bg-copper/10 blur-3xl" />
+
+  <div className="relative max-w-7xl mx-auto px-6 lg:px-10 py-24">
+
+    {/* Heading */}
+    <Reveal className="mb-14">
+      <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
+
+        <div>
+          <div className="inline-flex items-center gap-3 mb-5">
+            <span className="h-px w-10 bg-copper" />
+            <p className="font-mono text-[11px] tracking-[0.3em] text-cobalt">
+              OUR TEAM
+            </p>
+          </div>
+
+          <h2 className="font-display font-semibold text-4xl md:text-5xl lg:text-6xl text-ink leading-[1.02] max-w-2xl">
+            The people behind
+            <span className="block text-cobalt">
+              the numbers.
+            </span>
+          </h2>
         </div>
-      </section>
+
+        <p className="max-w-md text-sm md:text-base leading-relaxed text-slate-600 lg:pb-2">
+          Meet the professionals who bring expertise, experience and
+          execution together to create better financial outcomes.
+        </p>
+
+      </div>
+    </Reveal>
+
+    {/* Team Cards */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+      {[
+        {
+          name: "Supriya Sharma",
+          role: "Asst . VP",
+          image:
+            "https://dimensionfinancial.co.in/images/ss.png",
+        },
+        {
+          name: "Pragya Srivastav",
+          role: "CA",
+          image:
+            "https://dimensionfinancial.co.in/images/Pragyanew.jpeg",
+        },
+        {
+          name: "Shlok Shah",
+          role: "Software Developer",
+          image:
+            "https://dimensionfinancial.co.in/images/NEWSHLOK.jpeg",
+        },
+        {
+          name: "Utkarsh Bhatnagar",
+          role: "Asst Debt Manager",
+          image:
+            "https://dimensionfinancial.co.in/images/ub%20new.jpeg",
+        },
+        {
+          name: "Pratik Vishwakarma",
+          role: "Software Developer",
+          image:
+            "https://www.dimensioncorporateservices.com/team/Pratik.png",
+        },
+        {
+          name: "Shivangi",
+          role: "Company Secretry",
+          image:
+            "/images/shivangi.png",
+        },
+        {
+          name: "Arjun Singh",
+          role: "Accounts Executive",
+          image:
+            "https://dimensionfinancial.co.in/images/Arjun.jpeg",
+        },
+        {
+          name: "Anushkha Chandra",
+          role: "HR & ADMIN",
+          image:
+            "https://dimensionfinancial.co.in/images/HRAnushkha.jpg",
+        },
+        {
+          name: "Pooja Singh",
+          role: "Accounts Executive",
+          image:
+            "/images/pooja.jpg",
+        },
+        {
+          name: "Ved Prakash",
+          role: "Debt Market",
+          image:
+            "https://dimensionfinancial.co.in/images/HRAnushkha.jpg",
+        },
+        {
+          name: "S Ghosh",
+          role: "Debt Market",
+          image:
+            "https://dimensionfinancial.co.in/images/SGOSH.png",
+        },
+      ].map((person, i) => (
+
+        <Reveal
+          key={person.name}
+          delay={(i % 4) * 70}
+          className="h-full"
+        >
+          <article
+            className="
+              group relative h-full overflow-hidden
+              rounded-[26px]
+              border border-slate-200
+              bg-white
+              shadow-[0_10px_35px_rgba(15,23,42,0.05)]
+              transition-all duration-500
+              hover:-translate-y-2
+              hover:border-cobalt/50
+              hover:shadow-[0_25px_60px_rgba(15,23,42,0.12)]
+            "
+          >
+
+            {/* Top image area */}
+            <div className="relative h-[285px] overflow-hidden bg-slate-100">
+
+              {/* Image */}
+              <img
+                src={person.image}
+                alt={person.name}
+                className="
+                  h-full w-full
+                  object-cover
+                  object-top
+                  transition-transform
+                  duration-700
+                  ease-out
+                  group-hover:scale-105
+                "
+              />
+
+              {/* Bottom gradient */}
+              <div
+                className="
+                  absolute inset-x-0 bottom-0 h-32
+                  bg-gradient-to-t
+                  from-black/55
+                  via-black/10
+                  to-transparent
+                  opacity-80
+                "
+              />
+
+              {/* Role badge */}
+              <div className="absolute bottom-5 left-5 right-5">
+                <span
+                  className="
+                    inline-flex items-center
+                    rounded-full
+                    border border-white/30
+                    bg-white/15
+                    px-3 py-1.5
+                    backdrop-blur-md
+                    font-mono text-[9px]
+                    tracking-[0.15em]
+                    text-white
+                  "
+                >
+                  {person.role.toUpperCase()}
+                </span>
+              </div>
+
+            </div>
+
+            {/* Card content */}
+            <div className="relative p-6">
+
+              <div className="flex items-start justify-between gap-4">
+
+                <div>
+                  <h3
+                    className="
+                      font-display
+                      text-xl
+                      font-semibold
+                      leading-tight
+                      text-ink
+                      transition-colors
+                      duration-300
+                      group-hover:text-cobalt
+                    "
+                  >
+                    {person.name}
+                  </h3>
+
+                  <p className="mt-2 text-sm text-slate-500">
+                    {person.role}
+                  </p>
+                </div>
+
+                {/* Arrow */}
+                <div
+                  className="
+                    flex h-10 w-10 shrink-0
+                    items-center justify-center
+                    rounded-full
+                    border border-slate-200
+                    text-slate-500
+                    transition-all
+                    duration-300
+                    group-hover:border-cobalt
+                    group-hover:bg-cobalt
+                    group-hover:text-white
+                    group-hover:rotate-[-45deg]
+                  "
+                >
+                  <span className="text-lg">
+                    →
+                  </span>
+                </div>
+
+              </div>
+
+              {/* Bottom line */}
+              <div className="mt-6 h-px w-full bg-slate-100">
+                <div
+                  className="
+                    h-full w-0
+                    bg-cobalt
+                    transition-all
+                    duration-500
+                    group-hover:w-full
+                  "
+                />
+              </div>
+
+              <div className="mt-4 flex items-center justify-between">
+
+                <span className="font-mono text-[9px] tracking-[0.2em] text-slate-400">
+                  DIMENSION GROUP
+                </span>
+
+                <span
+                  className="
+                    text-xs font-semibold
+                    text-cobalt
+                    opacity-0
+                    translate-x-2
+                    transition-all duration-300
+                    group-hover:opacity-100
+                    group-hover:translate-x-0
+                  "
+                >
+                  VIEW PROFILE
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+        </Reveal>
+
+      ))}
+
+    </div>
+
+  </div>
+</section>
 
       {/* GROUP COMPANIES */}
       <section id="group-companies" className="bg-ink">
@@ -364,6 +842,75 @@ export default function Home() {
         </Reveal>
       </section>
 
+      {/* LICENSES & CERTIFICATIONS */}
+      <section id="licenses" className="bg-slate-50 border-t border-line">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-24">
+          <Reveal className="mb-14">
+            <p className="font-mono text-[12px] tracking-[0.3em] text-cobalt mb-4">COMPLIANCE & CERTIFICATIONS</p>
+            <h2 className="font-display font-semibold text-4xl md:text-5xl text-ink">
+              Regulatory excellence and trust.
+            </h2>
+            <p className="text-slate-600 text-lg leading-relaxed max-w-2xl mt-6">
+              Our certifications and registrations with leading regulatory bodies demonstrate our commitment to compliance, transparency, and investor protection.
+            </p>
+          </Reveal>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: "SEBI Certificate",
+                description: "BSE Debt Segment",
+                file: "SEBI_Certificate_(BSE%20Debt%20Segment).pdf",
+                icon: "🔒",
+              },
+              {
+                title: "BSE Membership",
+                description: "Official membership certificate",
+                file: "BSE_Membership_Certificate_DFSPL.pdf",
+                icon: "📜",
+              },
+              {
+                title: "Merchant Banking",
+                description: "SEBI-registered credential",
+                file: "Merchant%20Banking-Certificate.pdf",
+                icon: "🏦",
+              },
+              {
+                title: "OBPP Registration",
+                description: "Online Bond Platform Provider",
+                file: "OBPP_Registration_Certificate_DFSPL.PDF",
+                icon: "📋",
+              },
+            ].map((cert, i) => (
+              <Reveal key={cert.title} delay={i * 80}>
+                <a
+                  href={`/certificates/${cert.file}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative h-full overflow-hidden rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-2 hover:border-cobalt hover:shadow-md"
+                >
+                  <div className="flex flex-col h-full justify-between">
+                    <div>
+                      <div className="text-4xl mb-4">{cert.icon}</div>
+                      <h3 className="font-display font-semibold text-lg text-ink mb-2 group-hover:text-cobalt transition">
+                        {cert.title}
+                      </h3>
+                      <p className="text-sm text-slate-600 leading-relaxed">
+                        {cert.description}
+                      </p>
+                    </div>
+                    <div className="mt-6 flex items-center gap-2 text-cobalt font-semibold text-sm">
+                      <span>View Certificate</span>
+                      <span className="group-hover:translate-x-1 transition">→</span>
+                    </div>
+                  </div>
+                </a>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CONTACT */}
       <section id="contact" className="bg-white border-t border-line">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-24 grid lg:grid-cols-2 gap-16">
@@ -403,58 +950,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="bg-ink">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
-          <div>
-            <div className="font-display font-semibold text-xl text-white mb-2">DIMENSION</div>
-            <p className="text-white/50 text-sm leading-relaxed mb-4">
-              A well-established corporate house headquartered in Delhi, providing
-              financial services across investment management, data processing and
-              market research.
-            </p>
-            <div className="font-mono text-[11px] text-white/40 leading-relaxed space-y-1">
-              <p>SEBI Merchant Banker: INM000013314</p>
-              <p>SEBI Stock Broker: INZ000313233</p>
-              <p>OBPP at BSE · BSE Member ID 6824</p>
-            </div>
-          </div>
-          <div>
-            <p className="font-mono text-[11px] tracking-[0.25em] text-copper mb-4">OUR COMPANY</p>
-            <div className="space-y-2.5 text-sm text-white/60">
-              <a href="#top" className="block hover:text-white">Home</a>
-              <a href="/service" className="block hover:text-white">Services</a>
-              <a href="#about" className="block hover:text-white">About Us</a>
-              <a href="/group-companies" className="block hover:text-white">Group Companies</a>
-            </div>
-          </div>
-          <div>
-            <p className="font-mono text-[11px] tracking-[0.25em] text-copper mb-4">QUICK LINKS</p>
-            <div className="space-y-2.5 text-sm text-white/60">
-              <a href="/mutual-fund" className="block hover:text-white">Mutual Funds</a>
-              <a href="/provident-fund" className="block hover:text-white">Provident Fund</a>
-              <a href="/bond" className="block hover:text-white">Bonds/Debentures</a>
-              <a href="/fixed-deposit" className="block hover:text-white">Fixed Deposits</a>
-            </div>
-          </div>
-          <div>
-            <p className="font-mono text-[11px] tracking-[0.25em] text-copper mb-4">GET IN TOUCH</p>
-            <div className="space-y-2.5 text-sm text-white/60">
-              <a href="/business-partner" className="block hover:text-white">Become a Partner</a>
-              <a href="#contact" className="block hover:text-white">Contact Us</a>
-              <a href="#" className="block hover:text-white">Careers</a>
-              <a href="#" className="block hover:text-white">Gallery</a>
-              <a href="/annual-return" className="block hover:text-white">Investor Corner</a>
-            </div>
-          </div>
-        </div>
-        <div className="border-t border-white/10">
-          <div className="max-w-7xl mx-auto px-6 lg:px-10 py-6 flex flex-col sm:flex-row justify-between gap-2 text-white/40 text-xs font-mono">
-            <p>© 2026 DIMENSION GROUP. ALL RIGHTS RESERVED.</p>
-            <p>MADE WITH ♥ BY INHOUSE DEVELOPERS OF DIMENSION</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
 
       <a
         href="https://wa.me/919650799561"
