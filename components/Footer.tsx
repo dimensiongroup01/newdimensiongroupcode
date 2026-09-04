@@ -11,8 +11,11 @@ export default function Footer() {
             />
           </a>
           <p className="text-white/50 text-sm leading-relaxed">
-            A well-established corporate house headquartered in Delhi, providing financial services across investment
+            A well-established corporate house headquartered in Delhi NCR, providing financial services across investment
             management, data processing and market research.
+          </p>
+          <p className="text-white/50 text-sm leading-relaxed mt-4">
+            Dimension Tower, Plot No-10, 3rd Floor, Commercial Area, Kaushambi, Ghaziabad, U.P-201010
           </p>
         </div>
         <div>
