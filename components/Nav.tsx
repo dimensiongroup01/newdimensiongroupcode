@@ -80,7 +80,7 @@ export default function Nav() {
               Check kyc
             </a>
             <a
-              href="https://dimensiongroup.themfbox.com/"
+              href="https://mf.dimensiongroup.co.in/Home/Login"
               target="_blank"
               rel="noreferrer"
               className="font-sans text-sm font-normal bg-copper text-white px-5 py-2.5 rounded-full hover:bg-orange-600 transition-colors"
@@ -133,7 +133,7 @@ export default function Nav() {
               Check kyc
             </a>
             <a
-              href="https://dimensiongroup.themfbox.com/"
+              href="https://mf.dimensiongroup.co.in/Home/Login"
               target="_blank"
               rel="noreferrer"
               className="bg-copper text-white text-center py-2.5 rounded-full hover:bg-orange-600 transition-colors"

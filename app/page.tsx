@@ -32,7 +32,7 @@ export default function Home() {
 
               <div className="flex flex-wrap gap-4">
                 <a
-                  href="https://dimensiongroup.themfbox.com/"
+                  href="https://mf.dimensiongroup.co.in/Home/Login"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-copper px-7 py-3.5 text-sm font-semibold text-white shadow-[0_22px_50px_rgba(255,107,53,0.2)] transition hover:brightness-110"
@@ -340,7 +340,7 @@ export default function Home() {
             {[
               { name: "Supriya Sharma", role: "Asst. VP", image: "https://dimensionfinancial.co.in/images/ss.png" },
               { name: "Pragya Srivastav", role: "CA", image: "https://dimensionfinancial.co.in/images/Pragyanew.jpeg" },
-              { name: "Shlok Shah", role: "Software Developer", image: "https://dimensionfinancial.co.in/images/NEWSHLOK.jpeg" },
+              { name: "Shlok Shah", role: "Assistant Manager (Tech)", image: "https://dimensionfinancial.co.in/images/NEWSHLOK.jpeg" },
               { name: "Utkarsh Bhatnagar", role: "Asst Debt Manager", image: "https://dimensionfinancial.co.in/images/ub%20new.jpeg" },
               { name: "Pratik Vishwakarma", role: "Software Developer", image: "https://www.dimensioncorporateservices.com/team/Pratik.png" },
               { name: "Shivangi", role: "Company Secretary", image: "/images/shivangi.png" },
