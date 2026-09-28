@@ -207,7 +207,7 @@ export default function Home() {
             </h2>
             <p className="text-slate leading-relaxed mb-5">
               Dimension Group is a well-established corporate house, incorporated and
-              headquartered in Delhi, providing financial services with a wide range of products.
+              headquartered in Delhi NCR, providing financial services with a wide range of products.
             </p>
             <p className="text-slate leading-relaxed mb-5">
               Today it is a well-diversified conglomerate. Its businesses straddle the
@@ -497,8 +497,14 @@ export default function Home() {
               together a proposal tailored to your investment horizon.
             </p>
             <div className="space-y-4 font-mono text-sm text-slate">
-              <p>DELHI, INDIA</p>
-              <p>HELLO@DIMENSIONGROUP.CO.IN</p>
+              <p className="leading-relaxed">
+                DIMENSION TOWER, PLOT NO-10, 3RD FLOOR,
+                <br />
+                COMMERCIAL AREA, KAUSHAMBI, GHAZIABAD,
+                <br />
+                U.P-201010
+              </p>
+              <p>CONTACT@DIMENSIONGROUP.CO.IN</p>
             </div>
           </Reveal>
 

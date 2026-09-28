@@ -80,7 +80,7 @@ export default function RootLayout({
     url: "https://dimensiongroup.co.in",
     logo: "https://dimensiongroup.co.in/images/dimension-group-logo.jpeg",
     description:
-      "Dimension Group is a Delhi-headquartered financial advisory and investment management company offering bonds, fixed deposits, mutual funds, and provident fund solutions.",
+      "Dimension Group is a Delhi NCR-headquartered financial advisory and investment management company offering bonds, fixed deposits, mutual funds, and provident fund solutions.",
     sameAs: [],
     contactPoint: {
       "@type": "ContactPoint",
@@ -90,8 +90,11 @@ export default function RootLayout({
     address: {
       "@type": "PostalAddress",
       addressCountry: "IN",
-      addressRegion: "Delhi",
-      streetAddress: "Delhi",
+      addressRegion: "Uttar Pradesh",
+      addressLocality: "Ghaziabad",
+      postalCode: "201010",
+      streetAddress:
+        "Dimension Tower, Plot No-10, 3rd Floor, Commercial Area, Kaushambi",
     },
   };
 

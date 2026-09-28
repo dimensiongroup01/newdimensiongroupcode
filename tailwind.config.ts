@@ -17,7 +17,7 @@ const config: Config = {
         line: "#E4E2DA",
       },
       fontFamily: {
-        display: ["Georgia", "Cambria", "Times New Roman", "serif"],
+        display: ["Segoe UI", "Arial", "Helvetica Neue", "sans-serif"],
         body: ["Segoe UI", "Arial", "sans-serif"],
         mono: ["Consolas", "Monaco", "monospace"],
       },
