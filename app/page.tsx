@@ -55,7 +55,7 @@ export default function Home() {
 
               <div className="flex flex-wrap gap-4">
                 <a
-                  href="https://dimensiongroup.wylth.com/Home/Login"
+                  href="https://mf.dimensiongroup.co.in/Home/Login"
                   target="_blank"
                   rel="noreferrer"
                   className="group inline-flex items-center justify-center gap-2 rounded-full bg-copper-deep hover:bg-[#B34300] px-7 py-4 text-sm font-semibold text-white shadow-[0_22px_50px_-12px_rgba(255,105,0,0.65)] transition hover:-translate-y-0.5"
@@ -385,7 +385,7 @@ export default function Home() {
             {[
               { name: "Supriya Sharma", role: "Asst. VP", image: "/images/team/supriya-sharma.jpg" },
               { name: "Pragya Srivastav", role: "CA", image: "/images/team/pragya-srivastav.jpg" },
-              { name: "Shlok Shah", role: "Software Developer", image: "/images/team/shlok-shah.jpg" },
+              { name: "Shlok Shah", role: "Assistant Manager (Tech)", image: "/images/team/shlok-shah.jpg" },
               { name: "Utkarsh Bhatnagar", role: "Asst Debt Manager", image: "/images/team/utkarsh-bhatnagar.jpg" },
               { name: "Pratik Vishwakarma", role: "Software Developer", image: "/images/team/pratik-vishwakarma.jpg" },
               { name: "Shivangi", role: "Company Secretary", image: "/images/team/shivangi.jpg" },

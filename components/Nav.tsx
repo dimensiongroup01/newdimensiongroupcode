@@ -111,7 +111,7 @@ export default function Nav() {
               Check kyc
             </a>
             <a
-              href="https://dimensiongroup.wylth.com/Home/Login"
+              href="https://mf.dimensiongroup.co.in/Home/Login"
               target="_blank"
               rel="noreferrer"
               className="rounded-full bg-copper-deep hover:bg-[#B34300] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_10px_25px_-8px_rgba(255,105,0,0.6)] transition hover:-translate-y-0.5 hover:shadow-[0_14px_30px_-8px_rgba(255,105,0,0.7)]"
@@ -180,7 +180,7 @@ export default function Nav() {
                 Check kyc
               </a>
               <a
-                href="https://dimensiongroup.wylth.com/Home/Login"
+                href="https://mf.dimensiongroup.co.in/Home/Login"
                 target="_blank"
                 rel="noreferrer"
                 className="bg-copper-deep hover:bg-[#B34300] text-white font-semibold text-center py-3 rounded-full transition-colors"
