@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import logo from "@/app/logo.svg";
 
 export default function Hero3D() {
@@ -10,11 +10,14 @@ export default function Hero3D() {
           <div className="face front">
             <div className="shine" />
             <div className="logo">
-           <img
-              src={logo.src}
-              alt="Dimension Group logo"
-              className="brandLogo frontLogo"
-            />
+              <img
+                src={logo.src}
+                alt="Dimension Group logo"
+                width={140}
+                height={60}
+                decoding="async"
+                className="brandLogo frontLogo"
+              />
             </div>
           </div>
 
@@ -22,8 +25,12 @@ export default function Hero3D() {
             <div className="shine" />
             <div className="logo">
               <img
-                src="https://bondsadda.com/img/logo.png"
+                src="/images/bondsadda-logo.webp"
                 alt="BondsAdda logo"
+                width={640}
+                height={139}
+                loading="lazy"
+                decoding="async"
                 className="brandLogo backLogo"
               />
             </div>
@@ -65,8 +72,8 @@ export default function Hero3D() {
           border-radius: 50%;
           background: radial-gradient(
             circle at 50% 50%,
-            rgba(255, 107, 53, 0.35),
-            rgba(0, 119, 255, 0.25) 45%,
+            rgba(255, 105, 0, 0.35),
+            rgba(0, 180, 216, 0.25) 45%,
             transparent 70%
           );
           filter: blur(40px);
@@ -108,7 +115,7 @@ export default function Hero3D() {
           background-clip: padding-box;
           box-shadow:
             0 0 0 2px rgba(255, 255, 255, 0.6) inset,
-            0 0 45px rgba(255, 107, 53, 0.18),
+            0 0 45px rgba(255, 105, 0, 0.18),
             0 25px 70px rgba(0, 0, 0, 0.4),
             inset 0 0 30px rgba(255, 255, 255, 0.85);
         }
@@ -126,7 +133,7 @@ export default function Hero3D() {
           position: absolute;
           inset: -3px;
           border-radius: 2.15rem;
-          background: linear-gradient(135deg, #fff, #ff6b35 35%, #0077ff 70%, #fff);
+          background: linear-gradient(135deg, #fff, #FF6900 35%, #00B4D8 70%, #fff);
           z-index: -1;
           filter: blur(0.5px);
           opacity: 0.9;
@@ -136,7 +143,7 @@ export default function Hero3D() {
         .shine {
           position: absolute;
           top: -50%;
-          left: -60%;
+          left: 0;
           width: 60%;
           height: 200%;
           background: linear-gradient(
@@ -147,15 +154,18 @@ export default function Hero3D() {
             rgba(255, 255, 255, 0) 65%,
             transparent 100%
           );
-          transform: rotate(8deg);
+          /* Sweep with transform (GPU-composited) instead of animating left,
+             which forced a layout + paint every frame. */
+          transform: translateX(-100%) rotate(8deg);
+          will-change: transform;
           animation: sweep 3.2s ease-in-out infinite;
           pointer-events: none;
         }
 
         @keyframes sweep {
-          0% { left: -60%; }
-          55% { left: 130%; }
-          100% { left: 130%; }
+          0% { transform: translateX(-100%) rotate(8deg); }
+          55% { transform: translateX(217%) rotate(8deg); }
+          100% { transform: translateX(217%) rotate(8deg); }
         }
 
         .logo {
@@ -164,8 +174,11 @@ export default function Hero3D() {
         }
 
         .brandLogo {
-          width: 300px;
-          height: 250px;
+          /* Fluid logo — scales down with the coin on small screens
+             instead of overflowing its face. */
+          width: min(300px, 78%);
+          height: auto;
+          aspect-ratio: 6 / 5;
           object-fit: contain;
           margin: 0 auto;
           display: block;

@@ -4,3 +4,6 @@ out
 .env*.local
 npm-debug.log*
 .DS_Store
+
+# Separate build dir used for production builds (see next.config.mjs)
+.next-prod

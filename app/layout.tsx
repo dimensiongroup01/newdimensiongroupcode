@@ -1,5 +1,14 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
+
+// Inter — 400 (Regular), 600 (Semi-bold), 700 (Bold)
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  display: "swap",
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
   title:
@@ -67,6 +76,13 @@ export const metadata: Metadata = {
   },
 };
 
+// Mobile viewport hints: correct scaling plus the sky-blue browser chrome.
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#00B4D8",
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -106,7 +122,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
       </head>
-      <body className="font-body antialiased">{children}</body>
+      <body className={`${inter.variable} font-body antialiased`}>{children}</body>
     </html>
   );
 }

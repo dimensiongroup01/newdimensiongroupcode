@@ -6,23 +6,35 @@ const config: Config = {
     "./components/**/*.{ts,tsx}",
   ],
   theme: {
+    screens: {
+      xs: "480px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+    },
     extend: {
       colors: {
-        paper: "#FAFAF7",
-        ink: "#0F141B",
-        cobalt: "#2453FF",
-        "cobalt-dim": "#13277A",
-        copper: "#FF6B35",
-        slate: "#6B7280",
-        line: "#E4E2DA",
+        paper: "#F8FAFB",
+        ink: "#0F172A",
+        cobalt: "#00B4D8",
+        "cobalt-dim": "#007A96",
+        copper: "#FF6900",
+        // Deeper orange for buttons/labels with white or small text (WCAG AA: 4.7:1 on white).
+        "copper-deep": "#C84B00",
+        slate: "#475569",
+        line: "#E2E8F0",
       },
       fontFamily: {
-        display: ["Segoe UI", "Arial", "Helvetica Neue", "sans-serif"],
-        body: ["Segoe UI", "Arial", "sans-serif"],
-        mono: ["Consolas", "Monaco", "monospace"],
+        // One sans-serif family everywhere. `mono` is kept as a name (labels use
+        // `font-mono`) but now renders in the same sans-serif face.
+        display: ["var(--font-inter)", "Inter", "system-ui", "-apple-system", "Segoe UI", "Arial", "sans-serif"],
+        body: ["var(--font-inter)", "Inter", "system-ui", "-apple-system", "Segoe UI", "Arial", "sans-serif"],
+        mono: ["var(--font-inter)", "Inter", "system-ui", "-apple-system", "Segoe UI", "Arial", "sans-serif"],
       },
       backgroundImage: {
-        grid: "linear-gradient(to right, #E4E2DA 1px, transparent 1px), linear-gradient(to bottom, #E4E2DA 1px, transparent 1px)",
+        grid: "linear-gradient(to right, #E2E8F0 1px, transparent 1px), linear-gradient(to bottom, #E2E8F0 1px, transparent 1px)",
       },
       backgroundSize: {
         grid: "42px 42px",
